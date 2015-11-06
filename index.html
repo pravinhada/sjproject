@@ -80,12 +80,20 @@
         border-radius: 0 3px 3px 0;
       }
     </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="/data/pageinfo.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
+      <script src="/js/html5shiv.js"></script>
     <![endif]-->
+
+    <script>
+	window.onload = function() {
+		document.getElementById("header_name").innerHTML = pageinfo.pageTitle;
+		document.getElementById("copyright_name").innerHTML = pageinfo.copyright;
+	}
+    </script>
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -100,7 +108,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="muted">Samriddhi Journal</h3>
+        <h3 id="header_name" class="muted"></h3>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
@@ -137,7 +145,7 @@
           <p><a class="btn" href="#">View more &raquo;</a></p>
        </div>
         <div class="span4">
-          <h4>New Book Releases</h4>
+          <h4>Articles & Case Studies</h4>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
           <p><a class="btn" href="#">View more &raquo;</a></p>
         </div>
@@ -146,7 +154,7 @@
       <hr>
 
       <div class="footer">
-        <p>&copy; Samriddhi Journal & Publication 2015</p>
+        <p id="copyright_name"></p>
       </div>
 
     </div> <!-- /container -->
@@ -167,7 +175,6 @@
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
-
   </body>
 </html>
 
