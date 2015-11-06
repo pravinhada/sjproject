@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Samriddhi</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -81,11 +81,21 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="data/pageinfo.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
+
+    <script>
+        window.onload = function() {
+                document.title=pageinfo.title;
+                document.getElementById("header_name").innerHTML = pageinfo.pageTitle;
+                document.getElementById("copyright_name").innerHTML = pageinfo.copyright;
+        }
+    </script>
+
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -100,7 +110,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="muted">Samriddhi Journal</h3>
+        <h3 id="header_name" class="muted"></h3>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
@@ -123,7 +133,7 @@
       <hr>
 
       <div class="footer">
-        <p>&copy; Samriddhi Journal & Publication 2015</p>
+        <p id="copyright_name"></p>
       </div>
 
     </div> <!-- /container -->
