@@ -94,6 +94,19 @@
                 document.title=pageinfo.title;
                 document.getElementById("header_name").innerHTML = pageinfo.pageTitle;
                 document.getElementById("copyright_name").innerHTML = pageinfo.copyright;
+
+		var str = "<ul style='list-style-type:none'>";
+		for(i=0;i<contacts.length;i++) {
+			str += "<li><b>" + contacts[i].title + "</b></li>";
+			str += "<li>" + contacts[i].address + "</li>";
+			str += "<li>" + contacts[i].state + ", " + contacts[i].country + "</li>";
+			str += "<li>" + contacts[i].email + "</li>";
+			str += "<li>" + contacts[i].phone + "</li>";
+			str += "<br>";
+		}
+		str += "</ul>";
+
+		document.getElementById("contacts").innerHTML = str;
         }
     </script>
 
@@ -127,18 +140,7 @@
       </div>
 
       <!-- Example row of columns -->
-      <div>
-	<ul style="list-style-type:none">
-	 <li><b></b></li>
-	 <li></li>
-	 <li></li>
-	 <li></li>
-	 <li></li>
-	 <li></li>
-	</ul>
-	<br>
-	</ul>
-      </div>
+      <div id="contacts"></div>
 
       <hr>
 
