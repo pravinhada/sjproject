@@ -8,6 +8,7 @@ var app = express();
 app.use('/css', express.static('css'));
 app.use('/js', express.static('js'));
 app.use('/img', express.static('img'));
+app.use('/data',express.static('config'));
 
 /* main page */
 app.get('/', function(request, response) {
